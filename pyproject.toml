@@ -1,0 +1,25 @@
+[project]
+name = "test_pytest"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "keke", email = "1483035228@qq.com"},
+]
+dependencies = ["datetime>=5.5", "pytest>=8.4.1", "requests>=2.32.4"]
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = true
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project.entry-points.pytest11]
+result_log = "test_pytest.plugin"
+
+[tool.pdm.build]
+package-dir = "src"
