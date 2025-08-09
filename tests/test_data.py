@@ -30,7 +30,7 @@ def test_send_address(send_address,pytester : pytest.Pytester,tmp_path):
     config_path.write_text(
         f"[pytest]\n"
         f"send_address = {send_address}\n"
-        "send_when = every")
+        "send_when = on_fail")
     config = pytester.parseconfig(config_path)
     assert config.getini("send_address") == send_address
     pytester.makepyfile("""
