@@ -1,6 +1,6 @@
 import pytest
 pytest_plugins = 'pytester'
-from test_pytest import plugin
+
 
 
 @pytest.mark.parametrize("send_when",["every","on_fail"])
