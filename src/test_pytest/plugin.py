@@ -9,7 +9,7 @@ data = {"failed":0,
 def pytest_addoption(parser):
     parser.addini(
         "send_when",
-        help="什么时候发送企微信息"
+        help="什么时候发送企微信息1"
     )
     parser.addini(
         "send_address",
